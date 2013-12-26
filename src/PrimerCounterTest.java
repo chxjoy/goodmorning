@@ -21,7 +21,13 @@ public class PrimerCounterTest {
     @Test
     public void primer_factor_1() {
         PrimerCounter primer = new PrimerCounter(1);
-        Assert.assertEquals(1,primer.getFactor());
+        Assert.assertEquals(Arrays.asList(new Integer[]{1}),primer.getFactor());
+    }
+
+    @Test
+    public void primer_factor_2() {
+        PrimerCounter primer = new PrimerCounter(2);
+        Assert.assertEquals(Arrays.asList(new Integer[]{1,2}),primer.getFactor());
     }
 
 
