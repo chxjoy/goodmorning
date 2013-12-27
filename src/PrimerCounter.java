@@ -19,10 +19,22 @@ public class PrimerCounter {
 
     public List<Integer> getFactor() {
         // the type of primer_factors,  I have tried List<int[]> . But in the test case, Arrays.asList returns ArrayList<T>, should be an object. Hence, I change to List<Integer[]>
-        primer_factors.add(1);
-        if (primer > 1) {
-            primer_factors.add(primer);
+
+        if (primer == 1) {
+            primer_factors.add(1);
         }
+        while (primer > 1) {
+           if ( primer % 2 == 0) {
+            primer_factors.add(2);
+           }
+
+           if ( primer % 3 == 0) {
+                primer_factors.add(3);
+            }
+
+            primer /= 2;
+        }
+
         return primer_factors;
     }
 }
