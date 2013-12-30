@@ -23,16 +23,16 @@ public class PrimerCounter {
         if (primer == 1) {
             primer_factors.add(1);
         }
+
         while (primer > 1) {
-           if ( primer % 2 == 0) {
-            primer_factors.add(2);
-           }
 
-           if ( primer % 3 == 0) {
-                primer_factors.add(3);
-            }
-
-            primer /= 2;
+                for (int k = 2; k <= primer; k++) {
+                    if ( primer % k == 0) {
+                        primer /= k;
+                        primer_factors.add(k);
+                        break;
+                    }
+                }
         }
 
         return primer_factors;

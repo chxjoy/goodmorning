@@ -44,5 +44,23 @@ public class PrimerCounterTest {
         Assert.assertEquals(Arrays.asList(new Integer[]{2,2}),primer.getFactor());
     }
 
+    @Test
+    public void primer_factor_5() {
+        PrimerCounter primer = new PrimerCounter(5);
+        Assert.assertEquals(Arrays.asList(new Integer[]{5}),primer.getFactor());
+    }
+
+    @Test
+    public void primer_factor_7() {
+        PrimerCounter primer = new PrimerCounter(7);
+        Assert.assertEquals(Arrays.asList(new Integer[]{7}),primer.getFactor());
+    }
+
+    @Test
+    public void primer_factor_12() {
+        PrimerCounter primer = new PrimerCounter(12);
+        Assert.assertEquals(Arrays.asList(new Integer[]{2,2,3}),primer.getFactor());
+    }
+
 
 }
